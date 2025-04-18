@@ -1,0 +1,187 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f7;
+  color: #111827;
+}
+
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.chat-header {
+  background-color: #4f46e5;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 0.75rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.chat-header button {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1.1rem;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  line-height: 1;
+}
+
+.chat-header button:hover {
+  color: #fcd34d;
+}
+
+
+.chat-header-actions {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.75rem;
+}
+
+.chat-header-actions button {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+
+.chat-box {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 0.75rem;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.message {
+  max-width: 75%;
+  padding: 0.6rem 0.85rem;
+  font-size: 0.95rem;
+  border-radius: 16px;
+  line-height: 1.4;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+.message.user {
+  align-self: flex-end;
+  background-color: #4f46e5;
+  color: white;
+  border-radius: 16px 16px 4px 16px;
+}
+
+.message.assistant {
+  align-self: flex-start;
+  background-color: #e5e7eb;
+  color: #111827;
+  border-radius: 16px 16px 16px 4px;
+}
+
+.chat-input-row {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem;
+  gap: 0.5rem;
+  border-top: 1px solid #ddd;
+  background: #f9fafb;
+}
+
+textarea {
+  flex: 1;
+  height: 60px;
+  resize: none;
+  border-radius: 10px;
+  padding: 0.5rem;
+  font-size: 0.95rem;
+  border: 1px solid #ccc;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+button {
+  background-color: #4f46e5;
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.2s ease-in-out;
+}
+
+button:hover {
+  background-color: #4338ca;
+}
+.input-with-toggle {
+  display: flex;
+  height: 44px;
+  align-items: center;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+
+.input-with-toggle input {
+  flex: 1;
+  font-size: 16px;
+  line-height: 44px; /* this is the magic vertical center */
+  height: 100%;
+  padding: 0 12px;
+  border: 1px solid #ccc;
+  border-right: none;
+  border-radius: 8px 0 0 8px;
+  box-sizing: border-box;
+}
+
+
+
+.input-with-toggle button {
+  width: 44px;
+  height: 100%;
+  background-color: #f3f4f6;
+  border: 1px solid #ccc;
+  border-left: none;
+  border-radius: 0 8px 8px 0;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+
+
+
+.input-with-toggle button svg {
+  width: 20px;
+  height: 20px;
+  display: block;
+}
+
+
+.input-with-toggle button:hover {
+  background-color: #e5e7eb;
+}
+
+#apiKey[data-masking="on"]::before {
+  content: attr(data-placeholder);
+  color: #888;
+}
+
+
+
+

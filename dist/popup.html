@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Web AI Assistant</title>
+  <link rel="stylesheet" href="/styles.css" />
+  <style>
+    html, body {
+      width: 400px;
+      height: 550px;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f4f7;
+    }
+  </style>
+  <script type="module" crossorigin src="/popup.js"></script>
+  <link rel="modulepreload" crossorigin href="/cryptoUtils.js">
+</head>
+<body>
+  <div class="chat-container">
+    <div class="chat-header">
+      <span>Web AI Assistant</span>
+      <button id="clearHistoryBtn" title="Clear chat history">🗑️</button>
+    </div>
+    
+    
+    <div id="chatBox" class="chat-box"></div>
+    <div class="chat-input-row">
+      <textarea id="userInput" placeholder="Type a message..."></textarea>
+      <button id="sendBtn">➤</button>
+    </div>
+  </div>
+</body>
+</html>
+

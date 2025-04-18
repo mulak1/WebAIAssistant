@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Web AI Assistant Settings</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 1rem;
+      background-color: #f9fafb;
+      color: #111827;
+    }
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+    h2 {
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+    }
+    label {
+      display: block;
+      margin-top: 1rem;
+      font-weight: 500;
+    }
+    input, select {
+      width: 100%;
+      padding: 0.5rem;
+      margin-top: 0.25rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      margin-top: 1.5rem;
+      padding: 0.5rem 1rem;
+      background-color: #4f46e5;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+      width: 100%;
+    }
+    #status {
+      margin-top: 1rem;
+      font-weight: bold;
+      color: green;
+      text-align: center;
+    }
+    .input-with-toggle button:hover {
+    background-color: #e5e7eb;
+    }
+    .input-with-toggle {
+  display: flex;
+  height: 44px;
+  align-items: center;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+
+.input-with-toggle input {
+  flex: 1;
+  font-size: 16px;
+  line-height: 44px; /* this is the magic vertical center */
+  height: 100%;
+  padding: 0 12px;
+  border: 1px solid #ccc;
+  border-right: none;
+  border-radius: 8px 0 0 8px;
+  box-sizing: border-box;
+}
+
+
+
+
+
+.input-with-toggle button {
+  width: 44px;
+  height: 100%;
+  background-color: #f3f4f6;
+  border: 1px solid #ccc;
+  border-left: none;
+  border-radius: 0 8px 8px 0;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+
+
+
+.input-with-toggle button svg {
+  width: 20px;
+  height: 20px;
+  display: block;
+}
+
+
+
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>⚙️ Web AI Assistant Settings</h2>
+
+    <label for="apiKey">🔑 OpenAI API Key:</label>
+    <div class="input-with-toggle" style="display: flex; align-items: center; height: 44px; margin: 0.5rem 0;">
+      <div
+      id="apiKey"
+      contenteditable="true"
+      role="textbox"
+      aria-label="API Key"
+      data-placeholder="sk-..."
+      style="flex: 1; font-size: 16px; height: 100%; padding: 10px 12px; border: 1px solid #ccc; border-right: none; border-radius: 8px 0 0 8px; box-sizing: border-box; display: flex; align-items: center; outline: none; overflow: hidden;"
+    ></div>
+    <input id="pasteCatcher" type="text" style="position:absolute; opacity:0; height:0; width:0; border:0;" />
+
+    
+    
+      <button
+        id="toggleKeyVisibility"
+        title="Show/Hide API Key"
+        type="button"
+        style="width: 44px; height: 100%; background-color: #f3f4f6; border: 1px solid #ccc; border-left: none; border-radius: 0 8px 8px 0; padding: 0; margin: 0; display: flex; align-items: center; justify-content: center; cursor: pointer; box-sizing: border-box;"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24" width="20" fill="#4f46e5">
+          <path d="M0 0h24v24H0z" fill="none"/>
+          <path d="M12 6a9.77 9.77 0 018.94 5.66A9.77 9.77 0 0112 18a9.77 9.77 0 01-8.94-6.34A9.77 9.77 0 0112 6m0-2C7 4 2.73 7.11 1 12c1.73 4.89 6 8 11 8s9.27-3.11 11-8c-1.73-4.89-6-8-11-8zm0 5a3 3 0 100 6 3 3 0 000-6z"/>
+        </svg>
+      </button>
+    </div>
+    
+    
+    
+    
+    
+
+    <label for="personality">🧠 Assistant Personality:</label>
+    <select id="personality">
+      <option value="friendly and helpful">Friendly</option>
+      <option value="professional and concise">Professional</option>
+      <option value="witty and sarcastic">Witty</option>
+      <option value="inspirational and wise">Inspirational</option>
+    </select>
+
+    <button id="saveBtn">💾 Save Settings</button>
+
+    <button id="testKeyBtn" style="margin-top: 0.5rem;">🧪 Test API Key</button>
+
+    <button id="clearKeyBtn" style="margin-top: 0.5rem; background-color: #f87171;">
+      🗑️ Clear API Key
+    </button>
+    
+
+
+    <div id="status"></div>
+  </div>
+
+  <script type="module" src="/options.js"></script>
+</body>
+</html>

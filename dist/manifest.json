@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Web AI Assistant",
+  "version": "1.0",
+  "description": "A customizable AI-powered assistant with personality and style.",
+  "permissions": [
+    "storage",
+    "scripting"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  },
+  "options_page": "options.html",
+  "background": {
+    "service_worker": "service-worker-loader.js",
+    "type": "module"
+  },
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}
