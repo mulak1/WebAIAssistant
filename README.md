@@ -31,4 +31,18 @@ Tailwind-style bubble layout, stylized header, consistent font sizes, and proper
 📦 100% Local & Offline-First
 No third-party servers or cloud sync. All data is stored securely in your browser.
 
+🚀 Install & Use Locally
+Clone or download this repo
+
+Run:
+
+npm install
+npm run build
+
+Go to chrome://extensions
+
+Enable Developer Mode
+
+Click Load Unpacked and select the /dist folder
+
 
